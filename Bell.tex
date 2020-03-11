@@ -120,7 +120,7 @@ Einfachheut ist im Agilen Modell sehr wichtig und wird als \glqq{}die Kunst, die
 getaner Arbeit zu maximieren\grqq{}\cite{Beck2013} verstanden.\\\\
 Die besten Ergebnisse mit diesem Modell können durch selbstorganisierte Teams erzielt werden.\\\\
 Das gesamte Team soll in regelmäßigen Abständen selbst reflektieren, wann es seine Effektivität verbessern kann. \citep{Beck2013}
-\subsection{Paarprogrammieren}
+\subsection{Paarprogrammieren} \label{Paar}
 Wie oben schon erwähnt, liegt der Fokus der Agilen Softwareentwicklung mehr Fokus auf den Entwicklern und deren Interaktion liegt, als auf den Werkzeugen, welche zur Programmierung verwendet werden. So kommt es, dass sich Methoden entwickelt haben, welche sich besonders gut für Agile Softwareentwicklung eignen.\\
 Dazu wurde zum Beispiel die Methode des Paarprogrammierens (auch \glqq Pair Programming\grqq genannt) entwickelt. Dabei lösen zwei Entwickler eine Aufgabe an einem gemeinsamen Rechner.\\ 
 Ein Programmierer ist dabei \glqq Driver\grqq{} und der andere \glqq Observer\grqq.
@@ -142,8 +142,36 @@ Aus den bereits aufgezeigten Prinzipien und Leitsätzen der Agilen Softwareentwi
 Schon die Prinzipien, die im \glqq{}Agilen Manifest\grqq{} niedergeschrieben wurden, geben Aufschluss darüber, was die Entwickler, welche dieses Modell der Softwareentwicklung nutzen, hinaus wollen.\\ Es wird Wert auf \glqq{}Individuen und Interaktionen, Funktionierende Software, Zusammenarbeit mit dem Kunden und das Reagieren auf Veränderung\grqq{} gelegt. Wie man erkennen kann, liegt der Fokus der Softwareentwicklung eher auf den Menschen, welche am Prozess der Entwicklung teilnehmen. So steht zum Beispiel der Kunde mit seine Wünschen im Vordergrund. Deshalb ist das Modell so ausgelegt, dass die Entwickler schnell auf Kundenwünsche bzw. -anregungen reagieren können.\\ Zudem werden auch die Entwickler mehr berücksichtigt und es werden auch spezielle Arbeitsmethoden angewendet (siehe oben)\\Außerdem empfinden die Nutzer der Agilen Softwareentwicklung die akribische Dokumentation des Schaffensprozesses als Behinderung der Arbeit und bauen lieber auf \glqq funktionierende Software\grqq. \\ 
 
 \subsection{Extreme Programming}
+Ein Beispiel eines agilen Modells ist Extreme Programming (auch als \glqq XP\grqq genannt) wurde von Kent Beck (siehe \glqq Agiles Manifest\grqq) entwickelt. Ihm war beim Entwickeln mit dem Wasserfallmodell aufgefallen, dass die Kunden am Anfang des Projektes die Anforderungen noch nicht genau wussten und dadurch die Entwickler vor massive Probleme gestellt wurden, weil die Anpassung der Programme schwierig im langen SDLC umzusetzten war. Beck kam auf die Idee die Laufzeit des SDLC zu verkürzen - also den SDLC auf jede Entwicklung einzeln anzuwenden, anstatt auf das ganze Programm - und statt wenigen bzw. einer Wiederholung mehrere Wiederholungen des SDLC ablaufen zu lassen.\\\\
+\begin{figure}
+\begin{center}
+\includegraphics[width=10cm]{xp2.png}
+\caption{Vergleich des SDLC im Wasserfallmodell (links) zum XP (rechts) aus \cite{beck1999}}
+\end{center}
+\end{figure}
 
-\section{Vergleich von klassischer bzw. statischer und agiler Softwareentwicklung}
+Bei XP soll keine weitreichende Zukunftsplanung betrieben werden, da sich die Anforderungen jederzeit ändern können. Stattdessen soll alles Schritt für Schritt geplant und ausgeführt werden, d. h. erst einen Teil des Projektes abschließen und dann den nächsten planen und diesen ausarbeiten.\\\\
+Zudem hat Beck viele Arbeitstechniken benannt, die XP ausmachen.\\\\
+Kent zählt hierbei zum Beispiel die Methode des \glqq Planning Game\grqq{} \citep{beck1999}. Diese Praktik beinhaltet, dass der Kunde den Umfang und Zeitpunkt der Lieferung von Prototypen bzw. Ergebnissen auf der Grundlage der Schätzung der Programmierer bestimmt. Außerdem bedeutet dies, das die Programmierer nur das implementieren, was explizit vom Kunde gewünscht wird (siehe \nameref{Erleichterung}).\\\\
+Zu den vielfältigen Praktiken des XP gehört auch \glqq Simple Design\grqq{} \citep{beck1999}. Dies bedeutet, dass der Code so einfach wie möglich gehalten werden sollte. Das bedeutet: 
+\begin{itemize}
+\item kein doppelter Code, 
+\item so wenige Klassen wie möglich und
+\item so wenige Methoden wie möglich.
+\end{itemize}
+Kent Beck nennt hier den Leitspruch \glqq Say everything once and only once. (dt.: Sage alles einmal, nur einmal.)\grqq \cite{beck1999} (siehe dazu auch \nameref{Erleichterung}).\\\\
+Außerdem zählt Kent Beck zu den Techniken des XP \glqq Tests\grqq{} \citep{beck1999}. In XP sollten alle Proramme ausgiebig getestet werden, um Fehler immer schnell bzw. sofort zu finden.\\\\
+Zudem ist eine wichtige Technik von XP das \glqq Pair Programming\grqq{} \citep{beck1999} (siehe dazu \nameref{Paar}).\\\\
+Ein weiteres Prinzip ist \glqq Continous integration\grqq{} \citep{beck1999}. Hierbei  wird neuer Code beim schreiben schon in den vorhandenen Code eingefügt und auch darin getestet. Wenn dieser Code nicht im gesamten Umfeld funktioniert, wird er verworfen.\\\\
+Das Prinzip \glqq Collective Ownership\grqq{} \citep{beck1999} besagt, dass jeder Programmierer jederzeit den Code verbessern kann, wenn er eine Verbesserungsmöglichkeit entdeckt.\\\\
+Außerdem ist beim Entwicklungsprozess immer ein Kunde beim Team, der \glqq On-side costumer\grqq{} \citep{beck1999}.\\\\
+Zudem wird in XP eine \glqq 40-hour week\grqq{} \citep{beck1999} empfohlen, weil sich zu viel Arbeit negativ auf die Arbeitsmoral auswirkt. Kent meint dabei, dass niemand eine zweite Überstundenwoche in Folge leisten sollte (\glqq No one can work a second consecutive week of overtime\grqq{} \cite{beck1999}). Dadurch soll die Arbeitsmoral gesteigert werden.\\\\
+Die Entwicklungsarbeit findet in einem \glqq Open workspace\grqq{} \citep{beck1999} statt. Das Team arbeitet in einem großen Raum mit kleinen Abgrenzungen an den Seiten mit einzelnen Programmierern. In der Mitte des Raumes sollten die Paarprogrammierer sitzen.\\\\
+Das letzte Prinzip, was von Kent Beck genannt wird, ist das \glqq Just rules\grqq -Prinzip \citep{beck1999}. Dies besagt, dass alle Entwickler die festgelegten Regeln beim Beitritt ins Team akzeptieren, die Regeln aber flexibel geändert werden können, wenn alle Teammitglieder damit einverstanden sind.\\\\
+Zusammmenfassend lässt sich sagen, dass Extreme Programming ein gutes Beispiel für ein agiles Softwareentwicklungsmodell darstellt, da XP eine hohe Agilität - sowohl durch die ofte Wiederholung des SDLCs aber auch den angesprochenen Techniken, wie zum Beispiel dem Paarprogrammieren oder auch dem On-side costumer - aufweist.
+
+
+\section{Vergleich klassischer bzw. statischer und agiler Softwareentwicklung}
 Nun wurden sowohl die tradiotionelle bzw. statische Softwareentwicklung, als auch die agile Softwareentwicklung, genau untersucht. Im Folgenden werden die beiden Modelle verglichen und geschildert, für welche Projekte und Gegebenheiten sich die jeweiligen Softwareentwicklungsmodelle eignen.\\\\
 Zuerst wird die Kommunikation in den einzelnen Modellen analysiert.\\
 Die klassische Softwareentwicklung sieht eine formale Sprache zwischen den Projektbeteiligten vor, sodass eine Kommunikation auf formaler Ebene entsteht.\\
@@ -161,7 +189,7 @@ Aus den nun verglichenen Attributen der verschiedenen Softwareentwicklungsmodell
 In der statischen Softwareentwicklung hat die Stabilität des Entwicklungsprozesses und des Produktes die höchste Priorität, dafür wird aber die Flexibilität vernachlässigt. Das führt auch dazu, dass dieses Modell gut für große Projekte von großen Firmen mit vielen Mitarbeitern geeignet ist, da es wichtig ist eine geordnete Struktur bei vielen Aufgaben und Mitarbeitern zu besitzen.\\
 Bei der agilen Softwareentwicklung hat die Agilität bzw. Flexibilität den größten Stellenwert, dafür ist die Entwicklung nicht so stabil wie beim klassischen Ansatz, da mit vielen Teammitgliedern die Koordnation schwierig ausfallen kann. Daraus lässt sich ableiten, dass ein agiler Ansatz eher für kleine Projekte mit einem kleinen Team geeignet ist, da so Agilität, als auch Stabilität hergestellt werden kann, weil es wenige Teammitglieder zu koordnieren gibt. Dabei steht der Kunde im Vordergrund und es kann von den Entwicklern aktiv auch auf größere Wünsche eingegangen werden.
 
-\section{Prozesse zur Erleichterung des Programmierens}
+\section{Prozesse zur Erleichterung des Programmierens} \label{Erleichterung}
 \subsection{Motivation}
 Es gibt natürlich sehr viele verschiedene Varianten und Modelle eine Anwendung zu programmieren (siehe Kapitel 1), dabei sollten aber einige Dinge beachtet werden, um das Programm möglichst ansprechend für den Kunden und einfach prorammierbar zu gestalten. Außerdem kann so die Qualität des Programmes erheblich erhöht werden. 
 \subsection{Vermeidung von Überflüssigem}
