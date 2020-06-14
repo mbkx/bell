@@ -15,7 +15,8 @@ def pressHauptmenu(btn):
 		bell.hide("Hauptmenu")
 		bell.showSubWindow("Isbn")
 	if btn=="Fortfahren":
-		if bell.yesNoBox("Fortfahren", "Wollen Sie diese Daten übermitteln?", parent=None)==True:	
+		if bell.yesNoBox("Fortfahren", "Wollen Sie diese Daten übermitteln?", parent=None)==True:
+			l.append(bell.stringBox("Bibtexkey eingeben", "Bitte geben Sie den Bibtexkey ein. Dieser wird in Latex verwendet um das Werk zu ziteren."))
 			bell.infoBox("Erfolgreich", "Sie haben Ihre Daten erfolgreich übermittelt. Ihr Buch wurde im Literaturverzeichnis hinzugefügt", parent=None)
 			bell.stop() 
 		
@@ -118,9 +119,6 @@ def pressIsbn(btn):
 		bell.hideSubWindow("Isbn")
 		bell.show("Hauptmenu")
 
-#Schließbestätigung
-#def checkStop():
-#	return bell.yesNoBox("Bell schließen", "Wollen Sie die Anwendung wirklich schließen?")
 
 	
 				
@@ -167,9 +165,7 @@ bell.addEntry("Isbn")
 bell.addButton("OK", pressIsbn)
 bell.addNamedButton("Zurück", "ZurückIsbn", pressIsbn)
 bell.stopSubWindow()
-
-#Bestätigung zum Schließen
-#bell.setStopFunction(checkStop)	
+	
 
 
 bell.go()
