@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  isbn:
+    container_name: isbn
+    image: mbkx/isbn2bibtex:latest 
+    build: .
+    environment:
+      - DISPLAY
+      - XSOCK=/tmp/.X11-unix
+      - XAUTH=/tmp/.docker.xauth
+      - XAUTHORITY=/tmp/.docker.xauth
+    tty: true
+    stdin_open: true
+    privileged: true
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /tmp/.docker.xauth:/tmp/.docker.xauth
+      - ./src:/home/root/app
+      - /dev/bus/usb:/dev/bus/usb
+    # devices: 
+    #   - /dev/ttyACM0:/dev/ttyACM0
